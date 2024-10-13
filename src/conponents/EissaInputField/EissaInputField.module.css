@@ -1,0 +1,70 @@
+.input_container{
+    text-align: start;
+}
+
+.input_container span{
+    color: red;
+}
+
+.input_wrapper {
+    --focus-color: green;
+    --padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: var(--padding);
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.2s ease-in;
+    width: 100%;
+}
+
+label {
+    position: absolute;
+    background-color: white;
+    color: gray;
+    left: var(--padding);
+    padding: 0 4px;
+    transition: all 0.2s ease-in;
+    cursor: text;
+}
+
+input::placeholder {
+    transition: all 0.2s ease-in;
+}
+
+input:not(:focus)::placeholder {
+    opacity: 0;
+}
+
+input:is(:focus, :not(:placeholder-shown)) {
+    border: 2px solid var(--focus-color);
+}
+
+input:is(:focus, :not(:placeholder-shown))+label {
+    transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
+    font-size: 14px;
+    color: var(--focus-color);
+}
+
+.errorMessage {
+    color: red;
+    transition: opacity 0.75s ease, height 0.5s ease;
+    font-size: 0.75rem
+}
+
+.hideErrorMessage {
+    height: 0; 
+    opacity: 0;
+}
+
+.showErrorMessage {
+    opacity: 1;
+    height: 1rem;
+    max-height: max-content;
+}
+
