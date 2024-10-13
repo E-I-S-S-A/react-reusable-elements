@@ -7,8 +7,8 @@
 }
 
 .input_wrapper {
-    --focus-color: green;
-    --padding: 16px;
+    --focus-color: blue;
+    --padding: 0.75rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -41,14 +41,28 @@ input:not(:focus)::placeholder {
     opacity: 0;
 }
 
-input:is(:focus, :not(:placeholder-shown)) {
+input:is(:focus){
     border: 2px solid var(--focus-color);
 }
 
-input:is(:focus, :not(:placeholder-shown))+label {
+input:is(:focus) + label{
+    color: var(--focus-color);
+}
+
+input:is(:focus, :not(:placeholder-shown)) {
+}
+
+input:is(:focus, :not(:placeholder-shown)) + label {
     transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
     font-size: 14px;
-    color: var(--focus-color);
+}
+
+.error input:is(:not(:focus)){
+    border: 2px solid red;
+}
+
+.error label{
+    color: red;
 }
 
 .errorMessage {

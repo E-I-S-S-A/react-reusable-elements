@@ -21,9 +21,10 @@ export const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
     const { label, name, register, rules, error,isTouched ,placeholder = "" } = props;
+    
     return (
         <div className={styles.input_container}>
-            <div className={styles.input_wrapper}>
+            <div className={`${styles.input_wrapper} ${isTouched && error?.message && styles.error}`}>
                 <input
                     type="text"
                     id={name}

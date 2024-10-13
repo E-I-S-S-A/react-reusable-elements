@@ -28,10 +28,10 @@ function App() {
   };
 
   return (
-    <div className="App" style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
+    <div className="App" style={{width:"500px", padding:"5rem"}}>
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} style={{display:"flex", flexDirection:"column", gap:"1rem"}}>
         <EissaInputField<FormData>
           label="First Name"
           name="firstName"
@@ -39,6 +39,14 @@ function App() {
           error={errors?.firstName}
           rules={{ required: "First name is required", maxLength:{message:"Not more than 5", value:5}, pattern:{value:/eissa/, message:"Should contain eissa"} }}
           isTouched={touchedFields.firstName}
+        />
+        <EissaInputField<FormData>
+          label="Email"
+          name="email"
+          register={register}
+          error={errors?.email}
+          rules={{ required: "First name is required", maxLength:{message:"Not more than 5", value:5}, pattern:{value:/eissa/, message:"Should contain eissa"} }}
+          isTouched={touchedFields.email}
         />
         <button type="submit">Sub</button>
       </form>
