@@ -16,6 +16,7 @@
 
 .eissa_button:hover {
     opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .eissa_button:active {
