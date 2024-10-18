@@ -7,7 +7,7 @@
 }
 
 .input_wrapper {
-    --focus-color: var(--primary-color);
+    --focus-color: var(--brand-color);
     --padding: 0.75rem;
     position: relative;
     display: flex;

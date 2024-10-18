@@ -4,13 +4,14 @@
     padding: var(--padding);
     border-radius: var(--border-radius);
     cursor: pointer;
-    border: 2px solid var(--primary-color);
-    transition: all 0.5s ease;
+    min-width: 3rem;
+    border: 2px solid var(--brand-color);
     font-weight: bold;
+    transition: all 0.5s ease;
 }
 
 .primary {
-    background-color: var(--primary-color);
+    background-color: var(--brand-color);
     color: white;
 }
 
@@ -26,10 +27,35 @@
 
 .secondary {
     background-color: white;
-    color: var(--primary-color);
+    color: var(--brand-color);
 }
 
 .eissa_button.disabled {
     background-color: gray;
     cursor: not-allowed;
+}
+
+.loader {
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 2px solid var(--brand-color);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.primary > .loader{
+    border: 2px solid white;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -12,6 +12,6 @@ code {
     monospace;
 }
 
-:root {
-  --primary-color: rgb(101, 101, 232);
+:root{
+  --brand-color: green;
 }

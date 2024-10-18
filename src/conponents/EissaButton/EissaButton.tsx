@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './EissaButton.module.css';
+import EissaLoader from '../EissaLoader/EissaLoader';
 
 interface EissaButtonProps {
     label: string;
@@ -7,19 +8,21 @@ interface EissaButtonProps {
     type?: 'button' | 'submit' | 'reset';
     variant?: 'primary' | 'secondary';
     disabled?: boolean;
+    isLoading?: boolean;
 }
 
 const EissaButton: React.FC<EissaButtonProps> = (props: EissaButtonProps) => {
-    const { label, onClick, type = 'button', variant = 'primary', disabled = false } = props;
+    const { label, onClick, type = 'button', variant = 'primary', disabled = false, isLoading = false, } = props;
 
     return (
         <button
             className={`${styles.eissa_button} ${variant === 'primary' ? styles.primary : styles.secondary} ${disabled ? styles.disabled : ''}`}
             onClick={onClick}
             type={type}
-            disabled={disabled}
+            disabled={disabled || isLoading}
         >
-            {label}
+            {isLoading ? <EissaLoader varient={variant}/>
+                : label}
         </button>
     );
 };
