@@ -17,7 +17,7 @@ interface EissaInputFieldProps<T extends FieldValues> {
     placeholder?: string;
 }
 
-export const EissaInputField = <T extends FieldValues>(
+const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
     const { label, name, register, rules, error,isTouched ,placeholder = "" } = props;
@@ -37,3 +37,5 @@ export const EissaInputField = <T extends FieldValues>(
         </div>
     );
 };
+
+export default EissaInputField;
