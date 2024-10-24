@@ -1,9 +1,9 @@
 import React, { FormEventHandler, useState } from 'react';
 import './App.css';
 import { SubmitHandler, useForm } from "react-hook-form";
-import EissaInputField from './conponents/EissaInputField/EissaInputField';
+import EissaInputField from './components/EissaInputField/EissaInputField';
 import { DevTool } from "@hookform/devtools";
-import EissaButton from './conponents/EissaButton/EissaButton';
+import EissaButton from './components/EissaButton/EissaButton';
 
 interface FormData {
   firstName: string;
