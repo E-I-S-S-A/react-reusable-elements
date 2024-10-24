@@ -1,8 +1,7 @@
 import React, { FormEventHandler, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { SubmitHandler, useForm } from "react-hook-form";
-import { EissaInputField } from './conponents/EissaInputField/EissaInputField';
+import EissaInputField from './conponents/EissaInputField/EissaInputField';
 import { DevTool } from "@hookform/devtools";
 import EissaButton from './conponents/EissaButton/EissaButton';
 
@@ -45,7 +44,7 @@ function App() {
     <div className="App" style={{ width: "500px", padding: "5rem" }}>
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <form onSubmit={handleSubmit(onSubmit)} style={{display:"flex",gap:"1rem", flexDirection:"column"}}>
+      <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
         <EissaInputField<FormData>
           label="First Name"
           name="firstName"
@@ -63,7 +62,7 @@ function App() {
           isTouched={touchedFields.email}
         />
         <EissaButton label='Submit' type='submit' variant='secondary' isLoading={isLoading} />
-        <EissaButton label='Submit' type='submit' variant='primary' isLoading={isLoading}/>
+        <EissaButton label='Submit' type='submit' variant='primary' isLoading={isLoading} />
       </form>
       <DevTool control={control} />
     </div>
