@@ -1,20 +1,20 @@
 
-# 🎉 Eissa React UI Elements 🎉
+# Eissa React UI Elements
 A collection of reusable and customizable React UI components, designed to simplify form handling and UI building in React applications using react-hook-form.
 
 
-## 🌟 Demo Time!
+## Demo
 ![Demo](https://drive.google.com/file/d/1uKdfLO9pQw9CsmF1StLjV7E_YbgKIBzY/view?usp=sharing)
 
 
-## 🎨 Choose Your Own Color Adventure!
+## 🎨 Choose color of your own choice
 ![Color 1](https://drive.google.com/file/d/1kSwERHU3bU3V2e_DgfItdeYvHugdm7PK/view?usp=sharing)
 ![Color 2](https://drive.google.com/file/d/1gs4coVMmzIP3eR48LoEWhVpTvmgJZ8gT/view?usp=sharing)
 
-Or any other color your like 🎨✨
+Or any other color your like
 
 
-## ✨ Components
+## Components
 1. EissaInputField: A custom input field component that integrates with React Hook Form for form handling and validation.
 2. EissaButton: A versatile button component that supports different variants and a loading state for async actions.
 
@@ -31,7 +31,7 @@ or with yarn
 yarn add @eissafaheem/react-ui-elements
 ```
 
-## ✨ Example Usage
+## Example Usage
 
 ### 🖌️ Theme Color
 
