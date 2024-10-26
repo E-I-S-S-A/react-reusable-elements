@@ -4,12 +4,13 @@ A collection of reusable and customizable React UI components, designed to simpl
 
 
 ## Demo
-![Demo](https://drive.google.com/file/d/1uKdfLO9pQw9CsmF1StLjV7E_YbgKIBzY/view?usp=sharing)
+![react-ui-element1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3add3618-1ad9-4dac-9972-5b32323b6f05)
+
 
 
 ## Choose color of your own choice 🎨
-![Color 1](https://drive.google.com/file/d/1kSwERHU3bU3V2e_DgfItdeYvHugdm7PK/view?usp=sharing)
-![Color 2](https://drive.google.com/file/d/1gs4coVMmzIP3eR48LoEWhVpTvmgJZ8gT/view?usp=sharing)
+![Screenshot 2024-10-26 213145](https://github.com/user-attachments/assets/4d33adf5-75b9-4711-95ee-3a2cf03ec992)
+![Screenshot 2024-10-26 212952](https://github.com/user-attachments/assets/02cb0d4e-35e0-4af2-bcad-fbab08a9ea6a)
 
 Or any other color your like
 
