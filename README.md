@@ -1,5 +1,5 @@
 
-# Eissa React UI Elements
+# React Reusable UI Elements
 A collection of reusable and customizable React UI components, designed to simplify form handling and UI building in React applications using react-hook-form.
 
 
@@ -7,7 +7,7 @@ A collection of reusable and customizable React UI components, designed to simpl
 ![Demo](https://drive.google.com/file/d/1uKdfLO9pQw9CsmF1StLjV7E_YbgKIBzY/view?usp=sharing)
 
 
-## 🎨 Choose color of your own choice
+## Choose color of your own choice 🎨
 ![Color 1](https://drive.google.com/file/d/1kSwERHU3bU3V2e_DgfItdeYvHugdm7PK/view?usp=sharing)
 ![Color 2](https://drive.google.com/file/d/1gs4coVMmzIP3eR48LoEWhVpTvmgJZ8gT/view?usp=sharing)
 
