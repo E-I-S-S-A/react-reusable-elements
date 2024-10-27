@@ -1,10 +1,14 @@
 {
-    "name": "@eissafaheem/react-ui-elements",
-    "version": "1.0.6",
+    "name": "react-reusable-elements",
+    "version": "1.0.3",
     "description": "React reusble components",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/E-I-S-S-A/react-reusable-elements"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "rollup": "rollup -c --bundleConfigAsCjs"
@@ -31,6 +35,14 @@
         "rollup": "^4.24.0"
     },
     "keywords": [
+        "react-reusable-elements",
+        "react reusable elements",
+        "react reusable ui elements",
+        "react-reusable-ui-elements",
+        "react-reusable-ui-components",
+        "react reusable ui components",
+        "react-reusable-components",
+        "react reusable components",
         "react components",
         "react ui",
         "react ui components",
