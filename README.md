@@ -24,13 +24,13 @@ Or any other color your like
 ## 📦 Installation
 
 ```
-npm install @eissafaheem/react-ui-elements
+npm install react-reusable-elements
 ```
 
 or with yarn
 
 ```
-yarn add @eissafaheem/react-ui-elements
+yarn add react-reusable-elements
 ```
 
 ## Example Usage
@@ -51,7 +51,7 @@ In `index.css` for whole app, or in `MyComponent.module.css` when only sepecific
 ```typescript
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { EissaButton, EissaInputField } from '@eissafaheem/react-ui-elements';
+import { EissaButton, EissaInputField } from 'react-reusable-elements';
 import styles from './MyComponent.module.css';
 
 interface FormData {
