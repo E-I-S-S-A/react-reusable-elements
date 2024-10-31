@@ -4,11 +4,13 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import EissaInputField from './components/EissaInputField/EissaInputField';
 import { DevTool } from "@hookform/devtools";
 import EissaButton from './components/EissaButton/EissaButton';
+import EissaCheckbox from './components/EissaCheckbox/EissaCheckbox';
 
 interface FormData {
   firstName: string;
   email: string;
   age: number;
+  showPassword: boolean
 }
 
 function App() {
@@ -61,6 +63,9 @@ function App() {
           rules={{ required: "This is req", pattern: { value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, message: "Should be email" } }}
           isTouched={touchedFields.email}
         />
+        <div>h</div>
+        <EissaCheckbox label='Show Password' name='showPassword'
+          register={register} rules={{ required: { value: true, message: "This is required to accept" } }} isTouched={touchedFields.showPassword} error={errors?.showPassword} />
         <EissaButton label='Submit' type='submit' variant='secondary' isLoading={isLoading} />
         <EissaButton label='Submit' type='submit' variant='primary' isLoading={isLoading} />
       </form>
