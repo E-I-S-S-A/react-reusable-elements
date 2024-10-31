@@ -31,8 +31,9 @@ const EissaInputField = <T extends FieldValues>(
                     id={name}
                     placeholder={placeholder}
                     {...register(name, rules)}
+                    className={styles.inputField}
                 />
-                <label htmlFor={name}>{label}</label>
+                <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
             </div>
             <div className={`${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage: styles.hideErrorMessage}`}> {error?.message}</div>
         </div>
