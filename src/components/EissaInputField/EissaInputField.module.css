@@ -67,18 +67,16 @@ input:is(:focus, :not(:placeholder-shown)) + label {
 
 .errorMessage {
     color: red;
-    transition: opacity 0.75s ease, height 0.5s ease;
-    font-size: 0.75rem
+    font-size: 0.75rem;
+    height: 1rem;
+    transition: opacity 0.75s ease;
 }
 
 .hideErrorMessage {
-    height: 0; 
     opacity: 0;
 }
 
 .showErrorMessage {
     opacity: 1;
-    height: 1rem;
-    max-height: max-content;
 }
 
