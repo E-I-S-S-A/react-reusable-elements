@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-input {
+.inputField {
     padding: var(--padding);
     border: 2px solid gray;
     outline: none;
@@ -23,7 +23,7 @@ input {
     width: 100%;
 }
 
-label {
+.inputFieldLabel {
     position: absolute;
     background-color: white;
     color: gray;
@@ -33,35 +33,35 @@ label {
     cursor: text;
 }
 
-input::placeholder {
+.inputField::placeholder {  
     transition: all 0.2s ease-in;
 }
 
-input:not(:focus)::placeholder {
+.inputField:not(:focus)::placeholder {
     opacity: 0;
 }
 
-input:is(:focus){
+.inputField:is(:focus){
     border: 2px solid var(--focus-color);
 }
 
-input:is(:focus) + label{
+.inputField:is(:focus) + .inputFieldLabel{
     color: var(--focus-color);
 }
 
-input:is(:focus, :not(:placeholder-shown)) {
+.inputField:is(:focus, :not(:placeholder-shown)) {
 }
 
-input:is(:focus, :not(:placeholder-shown)) + label {
+.inputField:is(:focus, :not(:placeholder-shown)) + .inputFieldLabel {
     transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
     font-size: 14px;
 }
 
-.error input:is(:not(:focus)){
+.error .inputField:is(:not(:focus)){
     border: 2px solid red;
 }
 
-.error label{
+.error .inputFieldLabel{
     color: red;
 }
 
