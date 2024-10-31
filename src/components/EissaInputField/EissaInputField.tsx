@@ -15,18 +15,19 @@ interface EissaInputFieldProps<T extends FieldValues> {
     error?: FieldError;
     isTouched?: boolean;
     placeholder?: string;
+    type?: "text" | "password"
 }
 
 const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
-    const { label, name, register, rules, error,isTouched ,placeholder = "" } = props;
+    const { label, name, register, rules, error,isTouched ,placeholder = "", type="text" } = props;
     
     return (
         <div className={styles.input_container}>
             <div className={`${styles.input_wrapper} ${isTouched && error?.message && styles.error}`}>
                 <input
-                    type="text"
+                    type={type}
                     id={name}
                     placeholder={placeholder}
                     {...register(name, rules)}
