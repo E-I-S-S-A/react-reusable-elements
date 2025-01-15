@@ -15,14 +15,15 @@ interface EissaInputFieldProps<T extends FieldValues> {
     error?: FieldError;
     isTouched?: boolean;
     placeholder?: string;
-    type?: "text" | "password"
+    type?: "text" | "password",
+    keepSpaceForError?: boolean
 }
 
 const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
-    const { label, name, register, rules, error,isTouched ,placeholder = "", type="text" } = props;
-    
+    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true } = props;
+
     return (
         <div className={styles.input_container}>
             <div className={`${styles.input_wrapper} ${isTouched && error?.message && styles.error}`}>
@@ -35,7 +36,7 @@ const EissaInputField = <T extends FieldValues>(
                 />
                 <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
             </div>
-            <div className={`${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage: styles.hideErrorMessage}`}> {error?.message}</div>
+            <div className={`${!keepSpaceForError && styles.heightZero} ${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage : styles.hideErrorMessage}`}> {error?.message}</div>
         </div>
     );
 };
