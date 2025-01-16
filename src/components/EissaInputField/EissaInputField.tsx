@@ -8,21 +8,24 @@ import {
 } from "react-hook-form";
 
 interface EissaInputFieldProps<T extends FieldValues> {
-    label: string;
+    label?: string;
     name: Path<T>;
     register: UseFormRegister<T>;
     rules?: RegisterOptions<T>;
     error?: FieldError;
     isTouched?: boolean;
     placeholder?: string;
-    type?: "text" | "password"
+    type?: "text" | "password",
+    keepSpaceForError?: boolean,
+    bg?: string,
+    fontColor?: string
 }
 
 const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
-    const { label, name, register, rules, error,isTouched ,placeholder = "", type="text" } = props;
-    
+    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true, bg, fontColor } = props;
+
     return (
         <div className={styles.input_container}>
             <div className={`${styles.input_wrapper} ${isTouched && error?.message && styles.error}`}>
@@ -31,11 +34,15 @@ const EissaInputField = <T extends FieldValues>(
                     id={name}
                     placeholder={placeholder}
                     {...register(name, rules)}
-                    className={styles.inputField}
+                    className={`${styles.inputField} ${label && styles.hide_placeholder}`}
+                    style={{ backgroundColor: bg && bg, color: fontColor && fontColor }}
                 />
-                <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
+                {
+                    label &&
+                    <label htmlFor={name} className={styles.inputFieldLabel} style={{ backgroundColor: bg && bg, color: fontColor && fontColor }}>{label}</label>
+                }
             </div>
-            <div className={`${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage: styles.hideErrorMessage}`}> {error?.message}</div>
+            <div className={`${!keepSpaceForError && styles.heightZero} ${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage : styles.hideErrorMessage}`}> {error?.message}</div>
         </div>
     );
 };

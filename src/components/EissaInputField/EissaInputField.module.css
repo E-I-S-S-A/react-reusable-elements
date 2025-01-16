@@ -1,8 +1,8 @@
-.input_container{
+.input_container {
     text-align: start;
 }
 
-.input_container span{
+.input_container span {
     color: red;
 }
 
@@ -33,35 +33,34 @@
     cursor: text;
 }
 
-.inputField::placeholder {  
+.inputField::placeholder {
     transition: all 0.2s ease-in;
 }
 
-.inputField:not(:focus)::placeholder {
+.hide_placeholder:not(:focus)::placeholder {
     opacity: 0;
 }
 
-.inputField:is(:focus){
+.inputField:is(:focus) {
     border: 2px solid var(--focus-color);
 }
 
-.inputField:is(:focus) + .inputFieldLabel{
+.inputField:is(:focus)+.inputFieldLabel {
     color: var(--focus-color);
 }
 
-.inputField:is(:focus, :not(:placeholder-shown)) {
-}
+.inputField:is(:focus, :not(:placeholder-shown)) {}
 
-.inputField:is(:focus, :not(:placeholder-shown)) + .inputFieldLabel {
+.inputField:is(:focus, :not(:placeholder-shown))+.inputFieldLabel {
     transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
     font-size: 14px;
 }
 
-.error .inputField:is(:not(:focus)){
+.error .inputField:is(:not(:focus)) {
     border: 2px solid red;
 }
 
-.error .inputFieldLabel{
+.error .inputFieldLabel {
     color: red;
 }
 
@@ -78,5 +77,9 @@
 
 .showErrorMessage {
     opacity: 1;
+    height: unset;
 }
 
+.heightZero {
+    height: 0;
+}
