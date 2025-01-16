@@ -16,13 +16,15 @@ interface EissaInputFieldProps<T extends FieldValues> {
     isTouched?: boolean;
     placeholder?: string;
     type?: "text" | "password",
-    keepSpaceForError?: boolean
+    keepSpaceForError?: boolean,
+    bg?: string,
+    fontColor?: string
 }
 
 const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
-    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true } = props;
+    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true, bg, fontColor } = props;
 
     return (
         <div className={styles.input_container}>
@@ -33,10 +35,11 @@ const EissaInputField = <T extends FieldValues>(
                     placeholder={placeholder}
                     {...register(name, rules)}
                     className={`${styles.inputField} ${label && styles.hide_placeholder}`}
+                    style={{ backgroundColor: bg && bg, color: fontColor && fontColor }}
                 />
                 {
                     label &&
-                    <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
+                    <label htmlFor={name} className={styles.inputFieldLabel} style={{ backgroundColor: bg && bg, color: fontColor && fontColor }}>{label}</label>
                 }
             </div>
             <div className={`${!keepSpaceForError && styles.heightZero} ${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage : styles.hideErrorMessage}`}> {error?.message}</div>
