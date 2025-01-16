@@ -37,7 +37,7 @@
     transition: all 0.2s ease-in;
 }
 
-.inputField:not(:focus)::placeholder {
+.hide_placeholder:not(:focus)::placeholder {
     opacity: 0;
 }
 

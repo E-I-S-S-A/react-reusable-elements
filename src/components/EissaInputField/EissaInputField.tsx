@@ -8,7 +8,7 @@ import {
 } from "react-hook-form";
 
 interface EissaInputFieldProps<T extends FieldValues> {
-    label: string;
+    label?: string;
     name: Path<T>;
     register: UseFormRegister<T>;
     rules?: RegisterOptions<T>;
@@ -32,9 +32,12 @@ const EissaInputField = <T extends FieldValues>(
                     id={name}
                     placeholder={placeholder}
                     {...register(name, rules)}
-                    className={styles.inputField}
+                    className={`${styles.inputField} ${label && styles.hide_placeholder}`}
                 />
-                <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
+                {
+                    label &&
+                    <label htmlFor={name} className={styles.inputFieldLabel}>{label}</label>
+                }
             </div>
             <div className={`${!keepSpaceForError && styles.heightZero} ${styles.errorMessage} ${isTouched && error?.message ? styles.showErrorMessage : styles.hideErrorMessage}`}> {error?.message}</div>
         </div>
