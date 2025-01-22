@@ -76,9 +76,9 @@ function App() {
         <EissaButton label='Submit' type='submit' variant='primary' isLoading={isLoading} />
       </form>
       <EissaModal ModalContent={() => {
-        return <>Eissa</>
+        return <EissaButton label='Close' onClick={modalVisible} />
       }} isVisible={isVisible} />
-      <EissaButton label='Submit' type='submit' variant='primary' onClick={modalVisible} />
+      <EissaButton label='Open' variant='primary' onClick={modalVisible} />
       <DevTool control={control} />
     </div>
   );
