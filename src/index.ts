@@ -2,3 +2,4 @@ export { default as EissaInputField } from "./components/EissaInputField/EissaIn
 export { default as EissaButton } from "./components/EissaButton/EissaButton";
 export { default as EissaLoader } from "./components/EissaLoader/EissaLoader";
 export { default as EissaCheckbox } from "./components/EissaCheckbox/EissaCheckbox";
+export { default as EissaModal } from "./components/EissaModal/EissaModal";
