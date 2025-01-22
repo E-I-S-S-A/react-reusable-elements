@@ -5,6 +5,7 @@ import EissaInputField from './components/EissaInputField/EissaInputField';
 import { DevTool } from "@hookform/devtools";
 import EissaButton from './components/EissaButton/EissaButton';
 import EissaCheckbox from './components/EissaCheckbox/EissaCheckbox';
+import EissaModal from './components/EissaModal/EissaModal';
 
 interface FormData {
   firstName: string;
@@ -26,11 +27,16 @@ function App() {
   );
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data); // You can handle your form data here
     handleClick()
   };
+
+  function modalVisible() {
+    setIsVisible(prev => !prev)
+  }
 
   const handleClick = () => {
     setIsLoading(true);
@@ -69,6 +75,10 @@ function App() {
         <EissaButton label='Submit' type='submit' variant='secondary' isLoading={isLoading} />
         <EissaButton label='Submit' type='submit' variant='primary' isLoading={isLoading} />
       </form>
+      <EissaModal ModalContent={() => {
+        return <>Eissa</>
+      }} isVisible={isVisible} />
+      <EissaButton label='Submit' type='submit' variant='primary' onClick={modalVisible} />
       <DevTool control={control} />
     </div>
   );
