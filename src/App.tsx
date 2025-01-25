@@ -54,12 +54,15 @@ function App() {
       <h2>Start editing to see some magic happen!</h2>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
         <EissaInputField<FormData>
-          label="First Name"
+          // label="First Name"
           name="firstName"
           register={register}
           error={errors?.firstName}
           rules={{ required: "First name is required", maxLength: { message: "Not more than 5", value: 5 }, pattern: { value: /eissa/, message: "Should contain eissa" } }}
           isTouched={touchedFields.firstName}
+          varient='secondary'
+          placeholder='Fiest Name'
+          // bg='red'
         />
         <EissaInputField<FormData>
           label="Email"

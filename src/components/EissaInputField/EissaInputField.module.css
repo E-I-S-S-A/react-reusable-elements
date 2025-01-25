@@ -83,3 +83,16 @@
 .heightZero {
     height: 0;
 }
+
+
+.borderlessInput {
+    border: none;
+}
+
+.borderlessInput:focus {
+    border: none;
+}
+
+.error .inputField:is(:not(:focus)) {
+    border: none;
+}
