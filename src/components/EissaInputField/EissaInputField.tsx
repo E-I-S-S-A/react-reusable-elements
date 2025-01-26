@@ -8,6 +8,7 @@ import {
 } from "react-hook-form";
 
 interface EissaInputFieldProps<T extends FieldValues> {
+    varient?: "primary" | "secondary"
     label?: string;
     name: Path<T>;
     register: UseFormRegister<T>;
@@ -24,7 +25,7 @@ interface EissaInputFieldProps<T extends FieldValues> {
 const EissaInputField = <T extends FieldValues>(
     props: EissaInputFieldProps<T>
 ) => {
-    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true, bg, fontColor } = props;
+    const { label, name, register, rules, error, isTouched, placeholder = "", type = "text", keepSpaceForError = true, bg, fontColor, varient = "primary" } = props;
 
     return (
         <div className={styles.input_container}>
@@ -34,7 +35,7 @@ const EissaInputField = <T extends FieldValues>(
                     id={name}
                     placeholder={placeholder}
                     {...register(name, rules)}
-                    className={`${styles.inputField} ${label && styles.hide_placeholder}`}
+                    className={`${styles.inputField} ${label && styles.hide_placeholder} ${varient === "secondary" && styles.borderlessInput}`}
                     style={{ backgroundColor: bg && bg, color: fontColor && fontColor }}
                 />
                 {
