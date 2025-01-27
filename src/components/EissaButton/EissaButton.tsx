@@ -3,16 +3,22 @@ import styles from './EissaButton.module.css';
 import EissaLoader from '../EissaLoader/EissaLoader';
 
 interface EissaButtonProps {
-    label: string;
+    label?: string;
     onClick?: () => void;
     type?: 'button' | 'submit' | 'reset';
     variant?: 'primary' | 'secondary';
     disabled?: boolean;
     isLoading?: boolean;
+    icon?: string,
+    bg?: string;
+    padding?: number
+    fontColor?: string;
+    borderColor?: string
 }
 
 const EissaButton: React.FC<EissaButtonProps> = (props: EissaButtonProps) => {
-    const { label, onClick, type = 'button', variant = 'primary', disabled = false, isLoading = false, } = props;
+    const { label, onClick, type = 'button', variant = 'primary', disabled = false,
+        isLoading = false, icon, bg, fontColor, padding, borderColor } = props;
 
     return (
         <button
@@ -20,8 +26,13 @@ const EissaButton: React.FC<EissaButtonProps> = (props: EissaButtonProps) => {
             onClick={onClick}
             type={type}
             disabled={disabled || isLoading}
+            style={{ backgroundColor: bg, padding: padding, color: fontColor, borderColor: borderColor }}
         >
-            {isLoading ? <EissaLoader varient={variant}/>
+            {
+                icon &&
+                <img src={icon} alt="Button Icon" />
+            }
+            {isLoading ? <EissaLoader varient={variant} />
                 : label}
         </button>
     );
