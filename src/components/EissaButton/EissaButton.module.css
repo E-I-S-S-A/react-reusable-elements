@@ -4,10 +4,13 @@
     padding: var(--padding);
     border-radius: var(--border-radius);
     cursor: pointer;
-    min-width: 3rem;
+    /* min-width: 3rem; */
     border: 2px solid var(--brand-color);
     font-weight: bold;
     transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .primary {

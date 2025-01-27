@@ -6,6 +6,7 @@ import { DevTool } from "@hookform/devtools";
 import EissaButton from './components/EissaButton/EissaButton';
 import EissaCheckbox from './components/EissaCheckbox/EissaCheckbox';
 import EissaModal from './components/EissaModal/EissaModal';
+import AddIcon from "./assets/svg/add.svg"
 
 interface FormData {
   firstName: string;
@@ -83,6 +84,7 @@ function App() {
       }} isVisible={isVisible} />
       <EissaButton label='Open' variant='primary' onClick={modalVisible} />
       <DevTool control={control} />
+      <EissaButton  type='button' variant='primary' isLoading={isLoading} icon={AddIcon} bg='white' padding={5} borderColor='red'/>
     </div>
   );
 }
