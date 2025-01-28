@@ -7,12 +7,13 @@ export type EissaAVatarProps = {
     bg?: string;
     fontColor?: string;
     name?: string
+    CTA?: () => void
 }
 
 const EissaAvatar = (props: EissaAVatarProps) => {
-    const { img, bg, fontColor, fontSize, height, name } = props;
+    const { img, bg, fontColor, fontSize, height, name, CTA } = props;
 
-    return <div className={styles.main_container} style={{ backgroundColor: bg, color: fontColor, fontSize: fontSize, height: height }}>
+    return <div className={styles.main_container} style={{ backgroundColor: bg, color: fontColor, fontSize: fontSize, height: height }} onClick={CTA}>
         {
             img ?
                 <img src={img} alt="Avatar" className={styles.avatar_img} /> :
