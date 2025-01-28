@@ -7,6 +7,7 @@ import EissaButton from './components/EissaButton/EissaButton';
 import EissaCheckbox from './components/EissaCheckbox/EissaCheckbox';
 import EissaModal from './components/EissaModal/EissaModal';
 import AddIcon from "./assets/svg/add.svg"
+import EissaAvatar from './components/EissaAvatar/EissaAvatar';
 
 interface FormData {
   firstName: string;
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div className="App" style={{ width: "500px", padding: "5rem" }}>
+      <EissaAvatar name='eissa' bg='red' fontColor='yellow' height={50} fontSize={30} img='https://static.vecteezy.com/system/resources/thumbnails/005/346/410/small_2x/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated-light-gray-studio-background-photo.jpg' />
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
@@ -63,7 +65,7 @@ function App() {
           isTouched={touchedFields.firstName}
           varient='secondary'
           placeholder='Fiest Name'
-          // bg='red'
+        // bg='red'
         />
         <EissaInputField<FormData>
           label="Email"
@@ -84,7 +86,7 @@ function App() {
       }} isVisible={isVisible} />
       <EissaButton label='Open' variant='primary' onClick={modalVisible} />
       <DevTool control={control} />
-      <EissaButton  type='button' variant='primary' isLoading={isLoading} icon={AddIcon} bg='white' padding={5} borderColor='red'/>
+      <EissaButton type='button' variant='primary' isLoading={isLoading} icon={AddIcon} bg='white' padding={5} borderColor='red' />
     </div>
   );
 }
