@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap');
+
+.logo {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  letter-spacing: -4px;
+  display: flex;
+}
+
+.logo span {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.logo span:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    letter-spacing: -2px;
+  }
+}
