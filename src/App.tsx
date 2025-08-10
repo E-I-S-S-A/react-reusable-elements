@@ -8,6 +8,7 @@ import EissaCheckbox from './components/EissaCheckbox/EissaCheckbox';
 import EissaModal from './components/EissaModal/EissaModal';
 import AddIcon from "./assets/svg/add.svg"
 import EissaAvatar from './components/EissaAvatar/EissaAvatar';
+import EissaTextLogo from './components/EissaTextLogo/EissaTextLogo';
 
 interface FormData {
   firstName: string;
@@ -87,6 +88,12 @@ function App() {
       <EissaButton label='Open' variant='primary' onClick={modalVisible} />
       <DevTool control={control} />
       <EissaButton type='button' variant='primary' isLoading={isLoading} icon={AddIcon} bg='white' padding={5} borderColor='red' />
+       <EissaTextLogo
+        text="Eissa"
+        size={140}
+        colors={["#4285F4", "#EA4335", "#FBBC05", "#34A853"]}
+      />
+
     </div>
   );
 }
