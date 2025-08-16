@@ -9,6 +9,7 @@ import EissaModal from './components/EissaModal/EissaModal';
 import AddIcon from "./assets/svg/add.svg"
 import EissaAvatar from './components/EissaAvatar/EissaAvatar';
 import EissaTextLogo from './components/EissaTextLogo/EissaTextLogo';
+import { ReactComponent as EissaLogo } from "../src/assets/svg/brand-logo-curved.svg";
 
 interface FormData {
   firstName: string;
@@ -89,8 +90,9 @@ function App() {
       <DevTool control={control} />
       <EissaButton type='button' variant='primary' isLoading={isLoading} icon={AddIcon} bg='white' padding={5} borderColor='red' />
        <EissaTextLogo
-        text="Eissa"
-        size={140}
+       size={30}
+        text="issa"
+        BrandLogo = {<EissaLogo height={30} width={30} />}
         colors={["#4285F4", "#EA4335", "#FBBC05", "#34A853"]}
       />
 
