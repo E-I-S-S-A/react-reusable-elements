@@ -1,56 +1,68 @@
 {
     "name": "react-reusable-elements",
-    "version": "1.5.1",
-    "description": "React reusble components",
+    "version": "1.5.2",
+    "description": "A collection of reusable React UI components.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/E-I-S-S-A/react-reusable-elements"
+    },
+    "homepage": "https://github.com/E-I-S-S-A/react-reusable-elements#readme",
+    "bugs": {
+        "url": "https://github.com/E-I-S-S-A/react-reusable-elements/issues"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "rollup": "rollup -c --bundleConfigAsCjs"
     },
     "author": "eissafaheem",
-    "license": "ISC",
+    "license": "MIT",
+    "sideEffects": false,
     "devDependencies": {
         "@rollup/plugin-commonjs": "^28.0.1",
         "@rollup/plugin-node-resolve": "^15.3.0",
         "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^12.1.1",
+        "rollup": "^4.24.0",
         "rollup-plugin-dts": "^6.1.1",
         "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
         "tslib": "^2.8.0",
         "typed-css-modules": "^0.9.1",
         "typescript": "^5.6.3",
         "postcss": "^8.4.47",
         "@types/react": "^18.3.12",
-        "rollup-plugin-postcss": "^4.0.2",
-        "@types/react-dom": "^18.3.0"
-    },
-    "dependencies": {
-        "react-hook-form": "^7.53.1",
-        "rollup": "^4.24.0",
+        "@types/react-dom": "^18.3.0",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-hook-form": "^7.53.1"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18",
+        "react-hook-form": "^7.0.0"
     },
     "keywords": [
         "react-reusable-elements",
         "react reusable elements",
-        "react reusable ui elements",
-        "react-reusable-ui-elements",
-        "react-reusable-ui-components",
         "react reusable ui components",
-        "react-reusable-components",
-        "react reusable components",
         "react components",
         "react ui",
-        "react ui components",
-        "react",
-        "react-ui",
-        "react-components",
-        "react-ui-components"
-    ]
+        "react ui components"
+    ],
+    "engines": {
+        "node": ">=16"
+    }
 }
