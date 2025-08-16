@@ -93,6 +93,6 @@
     border: none;
 }
 
-.error .inputField:is(:not(:focus)) {
+.error .borderlessInput:is(:not(:focus)) {
     border: none;
 }
