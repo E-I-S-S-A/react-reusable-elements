@@ -5,15 +5,22 @@ export interface EissaTextLogoProps {
   text?: string;
   size?: number;
   colors?: string[];
+  BrandLogo?: React.ReactNode
 }
 
 const EissaTextLogo: FC<EissaTextLogoProps> = ({
   text = "Logo",
-  size = 140,
+  size = 40,
   colors = ["#4285F4", "#EA4335", "#FBBC05", "#34A853"],
+  BrandLogo
 }) => {
   return (
     <div className={styles.logo} style={{ fontSize: `${size}px` }}>
+      <span>
+        {
+          BrandLogo && BrandLogo
+        }
+      </span>
       {text.split("").map((letter, i) => (
         <span
           key={i}
